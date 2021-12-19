@@ -17,7 +17,9 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var weatherTypeLabel: UILabel!
     
     func configureCell(forecast: Forecast) {
-        weatherIcon.image = UIImage(named: forecast.weatherType)
+        let iconURL = URL(string: "\(FORECAST_WEATHER_ICON_URL)\(forecast.weatherIcon)\(ICON_TYPE)")
+        weatherIcon.load(from: iconURL, animated: true)
+        
         dayLabel.text = "Date: \(forecast.date)"
         dayTempLabel.text = "Average Temperature: \(forecast.dayTemp)°C"
         pressureLabel.text = "Pressure: \(forecast.pressure)"
@@ -36,5 +38,25 @@ extension WeatherCell {
         dayLabel.accessibilityTraits = UIAccessibilityTraits.none
         dayLabel.font = UIFont.preferredFont(forTextStyle: .body)
         dayLabel.adjustsFontForContentSizeCategory = true
+        
+        dayTempLabel.isAccessibilityElement = true
+        dayTempLabel.accessibilityTraits = UIAccessibilityTraits.none
+        dayTempLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        dayTempLabel.adjustsFontForContentSizeCategory = true
+        
+        pressureLabel.isAccessibilityElement = true
+        pressureLabel.accessibilityTraits = UIAccessibilityTraits.none
+        pressureLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        pressureLabel.adjustsFontForContentSizeCategory = true
+        
+        humidityLabel.isAccessibilityElement = true
+        humidityLabel.accessibilityTraits = UIAccessibilityTraits.none
+        humidityLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        humidityLabel.adjustsFontForContentSizeCategory = true
+        
+        weatherTypeLabel.isAccessibilityElement = true
+        weatherTypeLabel.accessibilityTraits = UIAccessibilityTraits.none
+        weatherTypeLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        weatherTypeLabel.adjustsFontForContentSizeCategory = true
     }
 }

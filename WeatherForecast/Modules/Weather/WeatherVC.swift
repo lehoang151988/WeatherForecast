@@ -15,6 +15,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var titleLabel: UILabel!
     var forecasts = [Forecast]()
     private var inputTimer: Timer?
     private var searchText = ""
@@ -27,9 +28,11 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 160
         //forecast = Forecast()
         self.searchBar.delegate = self
         presenter = WeatherPresenter(viewable: self, service: WeatherService())
+        applyAccessibility()
     }
     
     @objc func fetchWeather() {
@@ -45,7 +48,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,5 +82,19 @@ extension WeatherVC: WeatherViewable {
         self.forecasts = forecasts
         tableView.reloadData()
         self.tableView.setLoading(visible: false)
+    }
+}
+
+extension WeatherVC {
+    func applyAccessibility() {
+        titleLabel.isAccessibilityElement = true
+        titleLabel.accessibilityTraits = UIAccessibilityTraits.none
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .body)
+        titleLabel.adjustsFontForContentSizeCategory = true
+        
+        searchBar.isAccessibilityElement = true
+        if #available(iOS 13.0, *) {
+            searchBar.searchTextField.adjustsFontForContentSizeCategory = true
+        }
     }
 }

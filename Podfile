@@ -4,7 +4,6 @@ use_frameworks!
 
 target 'WeatherForecast' do
   pod 'SnapKit'
-  pod 'SwiftyJSON', '~> 3.1'
   pod 'Alamofire', '~> 4.4'
   
   target 'WeatherForecastTests' do

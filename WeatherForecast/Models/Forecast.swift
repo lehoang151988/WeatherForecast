@@ -10,6 +10,7 @@ import Alamofire
 class Forecast {
     private var _date:String!
     private var _weatherType: String!
+    private var _weatherIcon: String!
     private var _dayTemp: String!
     private var _pressure: String!
     private var _humidity: String!
@@ -26,6 +27,13 @@ class Forecast {
             _weatherType = ""
         }
         return _weatherType
+    }
+    
+    var weatherIcon: String {
+        if _weatherIcon == nil {
+            _weatherIcon = ""
+        }
+        return _weatherIcon
     }
     
     var dayTemp: String {
@@ -61,6 +69,9 @@ class Forecast {
         if let weather = weatherDict["weather"] as? [Dictionary<String, AnyObject>] {
             if let main = weather[0]["main"] as? String {
                 self._weatherType = main
+            }
+            if let icon = weather[0]["icon"] as? String {
+                self._weatherIcon = icon
             }
         }
         
