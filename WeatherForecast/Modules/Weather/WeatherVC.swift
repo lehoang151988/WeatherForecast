@@ -72,6 +72,7 @@ extension WeatherVC: UISearchBarDelegate {
             self.tableView.setLoading(visible: true)
         } else {
             self.tableView.setLoading(visible: false)
+            return
         }
         inputTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(fetchWeather), userInfo: nil, repeats: false)
     }

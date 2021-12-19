@@ -12,7 +12,6 @@
 		20EB2B2E276CDC2C00938811 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB2B2D276CDC2C00938811 /* UITableView+Extension.swift */; };
 		20F89435276DC8A50032BBB6 /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F89434276DC8A50032BBB6 /* WeatherPresenter.swift */; };
 		20F8943A276E2B990032BBB6 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F89439276E2B990032BBB6 /* WeatherService.swift */; };
-		6814D3681E9A96F600DEC01B /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6814D3671E9A96F600DEC01B /* Location.swift */; };
 		6859B43D1E99FEF80029309A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859B43C1E99FEF80029309A /* AppDelegate.swift */; };
 		6859B43F1E99FEF80029309A /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6859B43E1E99FEF80029309A /* WeatherVC.swift */; };
 		6859B4421E99FEF80029309A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6859B4401E99FEF80029309A /* Main.storyboard */; };
@@ -45,7 +44,6 @@
 		20F89439276E2B990032BBB6 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		20FE0D18276B896D001F93DD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45857F12C1C94BF23CEF6F07 /* Pods-RainyShiny.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RainyShiny.release.xcconfig"; path = "Pods/Target Support Files/Pods-RainyShiny/Pods-RainyShiny.release.xcconfig"; sourceTree = "<group>"; };
-		6814D3671E9A96F600DEC01B /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		6859B4391E99FEF80029309A /* WeatherForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6859B43C1E99FEF80029309A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6859B43E1E99FEF80029309A /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				6859B4541E9A669D0029309A /* Forecast.swift */,
-				6814D3671E9A96F600DEC01B /* Location.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,7 +379,6 @@
 				6859B4531E9A65610029309A /* WeatherCell.swift in Sources */,
 				6859B4551E9A669D0029309A /* Forecast.swift in Sources */,
 				6859B44F1E9A2E6E0029309A /* Constants.swift in Sources */,
-				6814D3681E9A96F600DEC01B /* Location.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,7 +522,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -572,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

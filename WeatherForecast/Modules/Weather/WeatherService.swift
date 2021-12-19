@@ -14,8 +14,7 @@ protocol IWeatherService {
 
 class WeatherService: IWeatherService {
     func downloadForecastData(forCity city: String, completed: @escaping WeatherDataCompletion) {
-        Location.sharedInstance.cityName = city
-        let forecastURL = URL(string: FORECAST_URL)!
+        guard let forecastURL = URL(string: "\(FORECAST_CITY_URL)\(city)") else { return }
         Alamofire.request(forecastURL).responseJSON { response in
             if let error = response.error {
                 completed(nil, error)
