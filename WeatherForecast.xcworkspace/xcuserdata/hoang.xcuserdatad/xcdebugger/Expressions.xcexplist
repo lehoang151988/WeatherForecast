@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Forecast.init(weatherDict:):Forecast.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "weatherDict[&quot;pressure&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "weatherDict[&quot;humidity&quot;]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "WeatherVC.fetchWeather():WeatherVC.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchText">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
