@@ -38,6 +38,16 @@
                ReferencedContainer = "container:WeatherForecast.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "201B2B6F2771B83300D16467"
+               BuildableName = "WeatherForecastUITests.xctest"
+               BlueprintName = "WeatherForecastUITests"
+               ReferencedContainer = "container:WeatherForecast.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
