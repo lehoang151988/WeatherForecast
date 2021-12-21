@@ -23,3 +23,15 @@ This is a simple Demo project which aims to display weather information using MV
  - **`Alamofire`** - is an HTTP networking library written in Swift.
  - **`SnapKit`** - is a DSL to make Auto Layout easy on both iOS and OS X. 
 
+## Checklist
+- [x] Programming language: Swift is required, Objective-C is optional.
+- [x] Design app's architecture
+- [x] UI should be looks like in attachment
+- [x] Write UnitTests
+- [x] Acceptance Tests
+- [x] Exception handling
+- [x] Caching handling
+- [x] Accessibility for Disability Supports
+- [ ] Entity relationship diagram for the database and solution diagrams for the components,
+infrastructure design if any
+- [x] Readme file includes
