@@ -35,3 +35,5 @@ This is a simple Demo project which aims to display weather information using MV
 - [ ] Entity relationship diagram for the database and solution diagrams for the components,
 infrastructure design if any
 - [x] Readme file includes
+
+<img width="267" alt="Screen Shot 2021-12-21 at 13 16 14" src="https://user-images.githubusercontent.com/96364332/146881338-0814002d-2756-45fe-a5c7-280f8e1d26fe.png">
